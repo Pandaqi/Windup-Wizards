@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/technical_settings/technical_settings.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/settings.png" type="Texture" id=2]
+
+[node name="TechnicalSettings" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer"]
+margin_left = 361.0
+margin_top = 236.0
+margin_right = 663.0
+margin_bottom = 364.0
+
+[node name="Back" type="CenterContainer" parent="Control/CenterContainer/VBoxContainer"]
+margin_right = 302.0
+margin_bottom = 128.0
+
+[node name="Back" type="TextureRect" parent="Control/CenterContainer/VBoxContainer/Back"]
+margin_right = 302.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="Control/CenterContainer/VBoxContainer/Back/Back"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 311.0
+margin_bottom = 134.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/Back/Back/Button" to="." method="_on_SettingsButton_pressed"]

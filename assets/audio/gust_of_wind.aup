@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="gust_of_wind_data" version="1.3.0" audacityversion="2.3.3" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="709.2377533784" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="Software" value="Lavf58.29.100"/>
+	</tags>
+	<wavetrack name="gust_of_wind" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="10216">
+				<waveblock start="0">
+					<simpleblockfile filename="e080867e.au" len="10216" min="-0.427636" max="0.501184" rms="0.100274"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="gust_of_wind" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="10216">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808c39.au" len="10216" min="-0.412273" max="0.428851" rms="0.09067"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="whoosh_alternate" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.03242630" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="13679">
+				<waveblock start="0">
+					<simpleblockfile filename="e080859a.au" len="13679" min="-0.314653" max="0.351402" rms="0.054944"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="whoosh_alternate" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.03242630" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="13679">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808109.au" len="13679" min="-0.494122" max="0.501164" rms="0.073333"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="whoosh_alternate 2" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.04172336" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="7851">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808a31.au" len="7851" min="-0.289989" max="0.217023" rms="0.035629"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="whoosh_alternate 2" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.04172336" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="7851">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808dcc.au" len="7851" min="-0.501198" max="0.342587" rms="0.058148"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="whoosh_alternate 5" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="13617">
+				<waveblock start="0">
+					<simpleblockfile filename="e080895d.au" len="13617" min="-0.327049" max="0.344239" rms="0.059824"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="whoosh_alternate 5" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="13617">
+				<waveblock start="0">
+					<simpleblockfile filename="e08080ad.au" len="13617" min="-0.501203" max="0.470388" rms="0.067487"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

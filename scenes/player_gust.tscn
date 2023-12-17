@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SphereMesh" id=1]
+
+[node name="CPUParticles" type="CPUParticles"]
+transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0 )
+amount = 20
+local_coords = false
+mesh = SubResource( 1 )
+spread = 180.0
+flatness = 1.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.5
+initial_velocity_random = 0.5
+radial_accel = 1.0
+tangential_accel = 1.0
+scale_amount = 0.1
+scale_amount_random = 0.25

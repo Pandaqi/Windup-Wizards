@@ -1,0 +1,5 @@
+{
+  "name": "Reverse Magic",
+  "type": "world",
+  "levels": ["1-invert", "2-invert", "3-invert", "1-selfact", "2-selfact", "4-invert"]
+}

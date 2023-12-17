@@ -1,0 +1,100 @@
+{
+  "width": 3,
+  "height": 3,
+  "cells": [
+    -1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "cell_contents": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    false
+  ],
+  "entities": [
+    [],
+    [
+      {
+        "kind": "move",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 1,
+        "bad": true,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 0,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [
+      {
+        "kind": "move",
+        "knobs": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "rot": 0,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": -1
+      }
+    ],
+    [],
+    [],
+    []
+  ],
+  "solution": [
+    1,
+    0,
+    3,
+    3,
+    1,
+    2,
+    0,
+    3
+  ],
+  "config": {
+    "rev_wind": true,
+    "man_act": true,
+    "act_repeat": true,
+    "p_drag": true,
+    "drag_chain": true,
+    "team_stack": true
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Overview",
+  "type": "overview",
+  "worlds": ["first_turns", "reverse_magic", "bunnies_on_top", "lots_of_bunnies", "wizards_arrive", "attractive_wizards", "knobcatchers", "bunnyhops", "supporting_cast", "carousel_for_carrots", "sorcerer_stacks", "loose_loyalties", "bombing_bunnies", "seethrough_acts", "battery_bunnies", "wildest_wizards"],
+}

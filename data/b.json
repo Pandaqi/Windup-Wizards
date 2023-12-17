@@ -1,0 +1,63 @@
+{
+  "width": 3,
+  "height": 3,
+  "cells": [
+    1,
+    -1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    -1
+  ],
+  "entities": [
+    [],
+    [],
+    [],
+    [],
+    [
+      {
+        "kind": "move",
+        "knobs": [
+          false,
+          true,
+          false,
+          true
+        ],
+        "rot": 2,
+        "bad": true,
+        "auto": true,
+        "support": false
+      }
+    ],
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 2,
+        "bad": false,
+        "auto": false,
+        "support": false
+      }
+    ],
+    [],
+    [],
+    []
+  ],
+  "solution": [
+    2,
+    0,
+    2,
+    0,
+    2,
+    1,
+    2
+  ]
+}

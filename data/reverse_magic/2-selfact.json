@@ -1,0 +1,61 @@
+{
+  "width": 3,
+  "height": 2,
+  "cells": [
+    1,
+    0,
+    1,
+    -1,
+    0,
+    0
+  ],
+  "entities": [
+    [],
+    [
+      {
+        "kind": "move",
+        "knobs": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "rot": 2,
+        "bad": true,
+        "auto": false,
+        "support": false
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 2,
+        "bad": false,
+        "auto": false,
+        "support": false
+      }
+    ],
+    []
+  ],
+  "solution": [
+    0,
+    3,
+    1,
+    3,
+    2
+  ],
+  "config": {
+    "rev_wind": true,
+    "man_act": true,
+    "act_repeat": false,
+    "p_drag": false
+  }
+}

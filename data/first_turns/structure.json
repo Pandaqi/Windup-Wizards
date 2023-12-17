@@ -1,0 +1,5 @@
+{
+  "name": "First Turns",
+  "type": "world",
+  "levels": ["1-destruct", "2-destruct","3-destruct","1-regular","2-regular","3-regular","4-regular"]
+}

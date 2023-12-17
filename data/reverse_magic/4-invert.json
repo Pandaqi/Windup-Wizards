@@ -1,0 +1,115 @@
+{
+  "width": 4,
+  "height": 3,
+  "cells": [
+    0,
+    0,
+    0,
+    -1,
+
+    0,
+    1,
+    0,
+    1,
+
+    0,
+    0,
+    0,
+    -1
+  ],
+  "entities": [
+    [],
+    [ 
+      {
+        "kind": "move",
+        "knobs": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "rot": 1,
+        "bad": true,
+        "auto": false,
+        "support": false
+      }
+    ],
+    [],
+    [],
+
+    [
+      {
+        "kind": "move",
+        "knobs": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "rot": 0,
+        "bad": true,
+        "auto": false,
+        "support": false
+      }
+    ],
+    [],
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 0,
+        "bad": false,
+        "auto": false,
+        "support": false
+      },
+      {
+        "kind": "move",
+        "knobs": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "rot": 2,
+        "bad": true,
+        "auto": false,
+        "support": false
+      }
+    ],
+    [],
+
+    [],
+    [
+      {
+        "kind": "move",
+        "knobs": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "rot": 3,
+        "bad": true,
+        "auto": false,
+        "support": false,
+        "number": 1
+      }
+    ],
+    [],
+    []
+  ],
+  "solution": [
+    2,3,0,1,2,3,0,1,2
+  ],
+  "config": {
+    "rev_wind": true,
+    "man_act": true,
+    "act_repeat": false,
+    "p_drag": false
+  }
+}

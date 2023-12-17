@@ -1,0 +1,5 @@
+{
+  "name": "Bunnies On Top",
+  "type": "world",
+  "levels": ["0-multiple", "1-multiple", "2-multiple", "3-multiple", "4-multiple"]
+}

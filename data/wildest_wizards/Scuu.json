@@ -1,0 +1,146 @@
+{
+  "width": 5,
+  "height": 3,
+  "cells": [
+    0,
+    -1,
+    0,
+    0,
+    -1,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "cell_contents": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "entities": [
+    [],
+    [],
+    [],
+    [
+      {
+        "kind": "passthrough",
+        "knobs": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "rot": 1,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": -1
+      }
+    ],
+    [],
+    [
+      {
+        "kind": "battery",
+        "knobs": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "rot": 3,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 1,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [
+      {
+        "kind": "convert",
+        "knobs": [
+          false,
+          true,
+          true,
+          false
+        ],
+        "rot": 1,
+        "bad": true,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [
+      {
+        "kind": "battery",
+        "knobs": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "rot": 3,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 2
+      }
+    ]
+  ],
+  "solution": [
+    0,
+    2,
+    3,
+    1,
+    0
+  ],
+  "config": {
+    "rev_wind": true,
+    "man_act": true,
+    "act_repeat": true,
+    "p_drag": true,
+    "drag_chain": true,
+    "team_stack": true,
+    "stop_after_enc": false
+  }
+}

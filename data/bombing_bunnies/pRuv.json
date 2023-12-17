@@ -1,0 +1,104 @@
+{
+  "tutorial": [
+    {
+      "frame": 18,
+      "location": [4,0]
+    }
+  ],
+  "width": 3,
+  "height": 3,
+  "cells": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    -1,
+    -1
+  ],
+  "cell_contents": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "entities": [
+    [],
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 2,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "kind": "move",
+        "knobs": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "rot": 0,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [
+      {
+        "kind": "destruct",
+        "knobs": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "rot": 0,
+        "bad": true,
+        "auto": false,
+        "support": false,
+        "number": -1
+      }
+    ],
+    [],
+    [],
+    []
+  ],
+  "solution": [
+    1,
+    2,
+    3,
+    1,
+    0
+  ],
+  "config": {
+    "rev_wind": true,
+    "man_act": true,
+    "act_repeat": true,
+    "p_drag": true,
+    "drag_chain": true,
+    "team_stack": true,
+    "stop_after_enc": true
+  }
+}

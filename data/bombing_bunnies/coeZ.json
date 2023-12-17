@@ -1,0 +1,152 @@
+{
+  "width": 4,
+  "height": 4,
+  "cells": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0
+  ],
+  "cell_contents": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    true,
+    false,
+    false
+  ],
+  "entities": [
+    [],
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 1,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [
+      {
+        "kind": "destruct",
+        "knobs": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "rot": 0,
+        "bad": true,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [
+      {
+        "kind": "convert",
+        "knobs": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "rot": 2,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "kind": "rotate",
+        "knobs": [
+          false,
+          false,
+          true,
+          true
+        ],
+        "rot": 0,
+        "bad": false,
+        "auto": false,
+        "support": true,
+        "number": -2
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "kind": "convert",
+        "knobs": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "rot": 1,
+        "bad": true,
+        "auto": false,
+        "support": false,
+        "number": 2
+      }
+    ],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "solution": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    3,
+    0,
+    3
+  ],
+  "config": {
+    "rev_wind": true,
+    "man_act": true,
+    "act_repeat": true,
+    "p_drag": true,
+    "drag_chain": true,
+    "team_stack": true,
+    "stop_after_enc": true
+  }
+}

@@ -1,0 +1,452 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://scripts/map.gd" type="Script" id=1]
+[ext_resource path="res://scripts/map/helpers.gd" type="Script" id=2]
+[ext_resource path="res://scripts/map/spawner.gd" type="Script" id=3]
+[ext_resource path="res://scripts/main.gd" type="Script" id=4]
+[ext_resource path="res://scripts/commands.gd" type="Script" id=5]
+[ext_resource path="res://scripts/input.gd" type="Script" id=6]
+[ext_resource path="res://scripts/state.gd" type="Script" id=7]
+[ext_resource path="res://scripts/tutorial.gd" type="Script" id=8]
+[ext_resource path="res://scripts/camera.gd" type="Script" id=9]
+[ext_resource path="res://scenes/ui/ingame_button.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/ui/general_ui.png" type="Texture" id=11]
+[ext_resource path="res://scripts/ui/UI.gd" type="Script" id=12]
+[ext_resource path="res://assets/fonts/corben_bold.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://assets/fonts/puppies_play_regular.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://scripts/game_over.gd" type="Script" id=15]
+[ext_resource path="res://assets/ui/settings.png" type="Texture" id=16]
+[ext_resource path="res://scenes/technical_settings.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/ui/quit.png" type="Texture" id=18]
+[ext_resource path="res://scripts/feedback.gd" type="Script" id=19]
+[ext_resource path="res://admob-lib/admob.gd" type="Script" id=20]
+[ext_resource path="res://scripts/ad_manager.gd" type="Script" id=21]
+[ext_resource path="res://assets/ui/ad_modal.png" type="Texture" id=22]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 3
+background_sky = SubResource( 1 )
+background_color = Color( 0.905882, 0.568627, 0.964706, 1 )
+ambient_light_color = Color( 0.0156863, 0.027451, 0.14902, 1 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 64
+outline_size = 5
+outline_color = Color( 0.792157, 0.905882, 0.984314, 1 )
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 96
+outline_size = 2
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 42
+outline_size = 5
+outline_color = Color( 0.380392, 0.188235, 0.0352941, 1 )
+font_data = ExtResource( 13 )
+
+[sub_resource type="Shader" id=16]
+code = "shader_type canvas_item;
+
+uniform vec2 vp;
+uniform vec2 pos;
+uniform vec4 col : hint_color;
+uniform float rad = 100.0;
+
+void fragment() {
+	vec4 new_col = col;
+	
+	vec2 uv = UV*vp;
+	if(length(uv - pos) <= rad) {
+		new_col.a = 0.0;
+	}
+	
+	COLOR = new_col;
+}"
+
+[sub_resource type="ShaderMaterial" id=17]
+shader = SubResource( 16 )
+shader_param/vp = null
+shader_param/pos = null
+shader_param/col = null
+shader_param/rad = 100.0
+
+[sub_resource type="Animation" id=18]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Container/Settings:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Container/Quit:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+length = 12.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Container/Settings:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 12 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Container/Quit:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 12 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="SpatialMaterial" id=22]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id=21]
+material = SubResource( 22 )
+
+[sub_resource type="Curve" id=23]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.134752, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.875886, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=24]
+colors = PoolColorArray( 1, 1, 1, 0.384314, 1, 1, 1, 0 )
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 4 )
+world = "loose_loyalties"
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02358, 10.1075, 6.2301 )
+environment = SubResource( 2 )
+current = true
+script = ExtResource( 9 )
+
+[node name="KeyLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.812216, 0.260022, 0.522201, -0.583056, 0.390581, 0.712385, -0.0187266, -0.883083, 0.468843, 7.59342, 14.1234, 5.28111 )
+light_color = Color( 0.960784, 0.921569, 0.709804, 1 )
+light_energy = 0.5
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_normal_bias = 0.05
+directional_shadow_depth_range = 1
+
+[node name="FillLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.645109, 0.733829, -0.21291, -0.59348, -0.305715, 0.744526, 0.481265, 0.606658, 0.632732, -4.84468, 13.5944, 5.28111 )
+light_color = Color( 0.537255, 0.756863, 0.85098, 1 )
+light_energy = 0.25
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_normal_bias = 0.05
+directional_shadow_depth_range = 1
+
+[node name="RimLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.433301, -0.899461, -0.0567396, -0.675945, -0.365976, 0.639656, -0.596111, -0.238811, -0.766565, -4.84468, 9.53276, -16.2973 )
+light_color = Color( 0.956863, 0.827451, 1, 1 )
+light_energy = 0.125
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_normal_bias = 0.05
+directional_shadow_depth_range = 1
+
+[node name="Map" type="Spatial" parent="."]
+script = ExtResource( 1 )
+
+[node name="Helpers" type="Node" parent="Map"]
+script = ExtResource( 2 )
+
+[node name="Spawner" type="Node" parent="Map"]
+script = ExtResource( 3 )
+
+[node name="Cells" type="Spatial" parent="Map"]
+
+[node name="Entities" type="Spatial" parent="Map"]
+
+[node name="Tutorial" type="Spatial" parent="."]
+script = ExtResource( 8 )
+
+[node name="Tween" type="Tween" parent="Tutorial"]
+
+[node name="Commands" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="Input" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="State" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="ParallelTween" type="Tween" parent="."]
+
+[node name="IngameUI" type="CanvasLayer" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource( 12 )
+
+[node name="Tween" type="Tween" parent="UI"]
+
+[node name="ButtonContainer" type="Node2D" parent="UI"]
+position = Vector2( 1023.91, 599.36 )
+
+[node name="Undo" parent="UI/ButtonContainer" instance=ExtResource( 10 )]
+position = Vector2( -71.1025, -350.417 )
+type = "undo"
+
+[node name="Hint" parent="UI/ButtonContainer" instance=ExtResource( 10 )]
+position = Vector2( -67.5348, -248.145 )
+type = "hint"
+
+[node name="Turns" type="Node2D" parent="UI/ButtonContainer"]
+position = Vector2( -114.341, -105.509 )
+
+[node name="Sprite" type="Sprite" parent="UI/ButtonContainer/Turns"]
+position = Vector2( 1.84888, -0.0203552 )
+scale = Vector2( 0.66, 0.66 )
+texture = ExtResource( 11 )
+hframes = 8
+vframes = 4
+
+[node name="Label" type="Label" parent="UI/ButtonContainer/Turns"]
+margin_left = -47.6528
+margin_top = -86.522
+margin_right = 55.3472
+margin_bottom = 48.478
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" parent="UI/ButtonContainer" instance=ExtResource( 10 )]
+position = Vector2( -255.392, -63.6935 )
+type = "exit"
+
+[node name="Restart" parent="UI/ButtonContainer" instance=ExtResource( 10 )]
+position = Vector2( -360.042, -63.6935 )
+type = "restart"
+
+[node name="WorldTitle" type="Node2D" parent="UI"]
+position = Vector2( 516.332, 536.537 )
+
+[node name="Label" type="Label" parent="UI/WorldTitle"]
+margin_left = -303.0
+margin_top = -49.0
+margin_right = 310.0
+margin_bottom = 47.0
+custom_colors/font_color = Color( 0.0352941, 0.0941176, 0.0941176, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "First Turns"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ActionFeedback" type="Node2D" parent="UI"]
+position = Vector2( 516.332, 536.537 )
+
+[node name="Label" type="Label" parent="UI/ActionFeedback"]
+margin_left = -303.0
+margin_top = -49.0
+margin_right = 310.0
+margin_bottom = 47.0
+custom_colors/font_color = Color( 0.027451, 0.0823529, 0.0823529, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "First Turns"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KnobCounter" type="Node2D" parent="UI"]
+
+[node name="Sprite" type="Sprite" parent="UI/KnobCounter"]
+position = Vector2( 77.6094, 77.4363 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+hframes = 8
+vframes = 4
+frame = 6
+
+[node name="Label" type="Label" parent="UI/KnobCounter"]
+margin_left = 26.8746
+margin_top = -2.17645
+margin_right = 129.875
+margin_bottom = 132.824
+custom_colors/font_color = Color( 1, 0.980392, 0.894118, 1 )
+custom_fonts/font = SubResource( 20 )
+text = "3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerBattery" type="Node2D" parent="UI"]
+
+[node name="Sprite" type="Sprite" parent="UI/PlayerBattery"]
+position = Vector2( 77.6094, 77.4363 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+hframes = 8
+vframes = 4
+frame = 7
+
+[node name="Label" type="Label" parent="UI/PlayerBattery"]
+margin_left = 26.8746
+margin_top = -2.17645
+margin_right = 129.875
+margin_bottom = 132.824
+custom_colors/font_color = Color( 1, 0.980392, 0.894118, 1 )
+custom_fonts/font = SubResource( 20 )
+text = "3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Feedback" type="CanvasLayer" parent="."]
+script = ExtResource( 19 )
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+script = ExtResource( 15 )
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+material = SubResource( 17 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.0156863, 0.0352941, 0.160784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" parent="." instance=ExtResource( 17 )]
+
+[node name="Container" type="Node2D" parent="Settings"]
+
+[node name="Settings" type="Sprite" parent="Settings/Container"]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="Button" type="Button" parent="Settings/Container/Settings"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 303.0
+margin_bottom = 126.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Sprite" parent="Settings/Container"]
+position = Vector2( 0, 50.032 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 18 )
+centered = false
+
+[node name="Button" type="Button" parent="Settings/Container/Quit"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 303.0
+margin_bottom = 126.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Settings"]
+autoplay = "SettingsReminderFade"
+anims/RESET = SubResource( 18 )
+anims/SettingsReminderFade = SubResource( 19 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+
+[node name="CPUParticles" type="CPUParticles" parent="."]
+amount = 45
+lifetime = 5.0
+preprocess = 1.0
+randomness = 1.0
+lifetime_randomness = 0.2
+mesh = SubResource( 21 )
+emission_shape = 1
+emission_sphere_radius = 15.0
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+initial_velocity_random = 1.0
+scale_amount = 0.5
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 23 )
+color = Color( 1, 1, 1, 0.498039 )
+color_ramp = SubResource( 24 )
+hue_variation = 0.2
+hue_variation_random = 1.0
+
+[node name="AdManager" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 5
+script = ExtResource( 21 )
+
+[node name="AdMob" type="Node" parent="AdManager"]
+script = ExtResource( 20 )
+is_real = true
+rewarded_id = "TODO: your rewarded ad id here"
+child_directed = true
+is_personalized = false
+
+[node name="TextureRect" type="TextureRect" parent="AdManager"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 22 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="AdManager"]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="pressed" from="Settings/Container/Settings/Button" to="Settings" method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="Settings/Container/Quit/Button" to="Settings" method="_on_QuitButton_pressed"]
+[connection signal="rewarded" from="AdManager/AdMob" to="AdManager" method="_on_AdMob_rewarded"]
+[connection signal="rewarded_video_closed" from="AdManager/AdMob" to="AdManager" method="_on_AdMob_rewarded_video_closed"]
+[connection signal="rewarded_video_failed_to_load" from="AdManager/AdMob" to="AdManager" method="_on_AdMob_rewarded_video_failed_to_load"]
+[connection signal="rewarded_video_left_application" from="AdManager/AdMob" to="AdManager" method="_on_AdMob_rewarded_video_left_application"]
+[connection signal="rewarded_video_started" from="AdManager/AdMob" to="AdManager" method="_on_AdMob_rewarded_video_started"]
+[connection signal="timeout" from="AdManager/Timer" to="AdManager" method="_on_Timer_timeout"]

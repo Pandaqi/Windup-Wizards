@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/knob_turn_3.ogg-e155f9d39f5302729934bbe4d2500ae7.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/knob_turn_3.ogg"
+dest_files=[ "res://.import/knob_turn_3.ogg-e155f9d39f5302729934bbe4d2500ae7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

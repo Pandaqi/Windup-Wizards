@@ -1,0 +1,165 @@
+{
+  "width": 4,
+  "height": 4,
+  "cells": [
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "cell_contents": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "entities": [
+    [
+      {
+        "kind": "jump",
+        "knobs": [
+          false,
+          true,
+          false,
+          false
+        ],
+        "rot": 3,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": -3
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "kind": "repel",
+        "knobs": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "rot": 2,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "kind": "rotate",
+        "knobs": [
+          false,
+          true,
+          false,
+          false
+        ],
+        "rot": 2,
+        "bad": false,
+        "auto": false,
+        "support": true,
+        "number": 2
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "kind": "passthrough",
+        "knobs": [
+          true,
+          true,
+          false,
+          false
+        ],
+        "rot": 2,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 1
+      }
+    ],
+    [
+      {
+        "kind": "battery",
+        "knobs": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "rot": 3,
+        "bad": true,
+        "auto": false,
+        "support": false,
+        "number": 2
+      }
+    ],
+    [],
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 3,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    []
+  ],
+  "solution": [
+    2,
+    0,
+    3,
+    1,
+    2,
+    3
+  ],
+  "config": {
+    "rev_wind": true,
+    "man_act": true,
+    "act_repeat": true,
+    "p_drag": true,
+    "drag_chain": true,
+    "team_stack": true,
+    "stop_after_enc": true
+  }
+}

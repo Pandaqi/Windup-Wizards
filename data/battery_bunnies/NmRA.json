@@ -1,0 +1,129 @@
+{
+  "width": 3,
+  "height": 3,
+  "cells": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "cell_contents": [
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "entities": [
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 2,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [
+      {
+        "kind": "battery",
+        "knobs": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "rot": 0,
+        "bad": true,
+        "auto": false,
+        "support": true,
+        "number": -2
+      }
+    ],
+    [
+      {
+        "kind": "repel",
+        "knobs": [
+          false,
+          false,
+          true,
+          false
+        ],
+        "rot": 3,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [
+      {
+        "kind": "passthrough",
+        "knobs": [
+          true,
+          false,
+          true,
+          false
+        ],
+        "rot": 1,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 0
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "kind": "attract",
+        "knobs": [
+          true,
+          true,
+          false,
+          false
+        ],
+        "rot": 3,
+        "bad": false,
+        "auto": false,
+        "support": false,
+        "number": 1
+      }
+    ],
+    []
+  ],
+  "solution": [
+    0,
+    2,
+    1,
+    0,
+    0,
+    2
+  ],
+  "config": {
+    "rev_wind": true,
+    "man_act": true,
+    "act_repeat": true,
+    "p_drag": true,
+    "drag_chain": true,
+    "team_stack": true,
+    "stop_after_enc": true
+  }
+}

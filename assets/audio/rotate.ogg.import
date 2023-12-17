@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rotate.ogg-6e82078577d82baa6c614f0ce3330e3b.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/rotate.ogg"
+dest_files=[ "res://.import/rotate.ogg-6e82078577d82baa6c614f0ce3330e3b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,65 @@
+{
+  "tutorial": [
+    {
+      "frame": 33,
+      "location": [-2,0]
+    }
+  ],
+  "width": 3,
+  "height": 2,
+  "cells": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    -1
+  ],
+  "entities": [
+    [],
+    [],
+    [],
+    [
+      {
+        "kind": "move",
+        "knobs": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "rot": 0,
+        "bad": true,
+        "auto": true,
+        "support": false
+      }
+    ],
+    [
+      {
+        "kind": "player",
+        "knobs": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "rot": 2,
+        "bad": false,
+        "auto": false,
+        "support": false
+      }
+    ],
+    []
+  ],
+  "solution": [
+    2,
+    3,
+    0
+  ],
+  "config": {
+    "rev_wind": true,
+    "man_act": false,
+    "act_repeat": false,
+    "p_drag": false
+  }
+}
